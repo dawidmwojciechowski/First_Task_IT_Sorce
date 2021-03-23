@@ -10,6 +10,7 @@ body {
     height: 1552px;
 }
 
+
 /*NAV*/
 
 nav {
@@ -17,7 +18,17 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
 }
+
+a {
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4F5665;
+}
+
 
 .logo {
   display: inline-flex;
@@ -35,11 +46,42 @@ nav {
 }
 
 
-nav ul {
-  display: inline-flex;
+ nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
   list-style-type: none;
 }
 
+  nav li {
+    display: inline-block;
+    position: relative;
+    margin-right: 48px; 
+}
+
+nav a {
+  text-decoration: none;
+  font-family: $font;
+  color: #4F5665;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+
+.btn {
+  width: 150px;
+  height: 45px;
+  border: 1px solid #F53855;
+  box-sizing: border-box;
+  border-radius: 50px;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F53855;
+  background: $background;
+}
 
 
 
@@ -57,10 +99,14 @@ nav .hamburger {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  
 }
 
 .splash {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 83px;
   flex-wrap: wrap;
 
     .splash-description {
@@ -77,44 +123,46 @@ nav .hamburger {
         font-size: 16px;
         line-height: 30px;
         color: #4F5665;
+        margin-top: 20px;
       }
 
     }
 
     .btn1 {
-      background: #F53838;
-      border-radius: 10px;
       width: 250px;
       height: 60px;
-
-        h4 {
-          font-weight: 700;
-          font-family: $font;
-          font-size: 16px;
-          line-height: 25px;  
-          color: #FFFFFF;
-        }
-
-        .btn2 {
-          background: rgba(245, 56, 56, 0.35);
-          width: 211.83px;
-          height: 60px;
-          filter: blur(54px);
-          border-radius: 10px;
-        }
+      margin-top: 80px;
+      background: #F53838; 
+      border-radius: 10px;
+      box-shadow: 0 0 54px  #f63636;
     }
+
+        
+
+    h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-family: $font;
+      font-size: 16px;
+      line-height: 25px;
+      color: #FFFFFF;
+      margin: 0 auto;
+    }
+        
+  }
 
     img {
       justify-content: right;
     }
-
-}
 
 
 .box {
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 103px;
   border: 1px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -180,7 +228,107 @@ nav .hamburger {
     }
 }
 
-  
-  /*@media (max-width: 767px) {
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 177px;
 
-  }*/
+    .image {
+      margin-top: -350px;
+      margin-right: 170px;
+    }
+
+    .bottom-description {
+      margin-right: 150px;
+      margin-top: 160px;
+
+        h2 {
+          font-size: 35px;
+          font-family: $font;
+          line-height: 50px;
+          text-align: left;
+          vertical-align: top;
+          color: #0B132A;
+        }
+
+        h3{
+          font-size: 16px;
+          font-family: $font;
+          line-height: 30px;
+          text-align: left;
+          vertical-align: top;
+          color: #4F5665;
+        }
+    }
+
+    .bottom-description ul {
+      list-style-image: url("https://i.postimg.cc/D0NQBg51/Group-1120green-ul.png");
+      text-align: left;
+      font-family: $font;
+      font-size: 14px;
+      line-height: 30px;
+      color: #4F5665;
+    }
+} 
+
+  
+  @media (max-width: 767px) {
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      background: #fff;
+      top: 20px;
+      width: 100%;
+    }
+    
+
+    nav ul.active {
+      display: block;
+    }
+    
+    nav .hamburger {
+      display: block;
+    }
+
+    .splash {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-width: 500px;
+
+      img {
+        width: 75%;
+        height: 75%;
+      }
+    }
+
+    .box {
+      display: contents;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .bottom {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-width: 500px;
+
+      .image {
+        margin: -500px 0 0 0;
+      }
+
+      .bottom-description {
+        margin: 0;
+      }
+    }
+  }
