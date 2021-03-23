@@ -254,19 +254,36 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 40px;
   }
   nav ul {
     flex-direction: column;
+    display: none;
+    justify-content: start;
     position: absolute;
-    background: #fff;
     top: 20px;
     width: 100%;
   }
   nav ul.active {
     display: block;
+    justify-content: space-around;
+  }
+  nav li {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
   }
   nav .hamburger {
     display: block;
+    color: red;
+    background-color: black;
+  }
+  .main {
+    position: absolute;
+    width: 100%;
+    margin-top: 200px;
   }
   .splash {
     display: flex;
